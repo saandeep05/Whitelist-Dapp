@@ -30,4 +30,8 @@ contract Whitelist {
         // Increase the number of whitelisted addresses
         numAddressesWhitelisted += 1;
     }
+
+    function isWhitelistedAddress(address user) external view returns(bool) {
+        return whitelistedAddresses[user];
+    }
 }
